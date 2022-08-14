@@ -57,3 +57,30 @@ npm run serve
 ## 📝 How to write an app
 
 WIP :)
+
+Let's say you want to add a "GraphApp"
+
+/src/assets/apps.json
+
+add your app config
+
+```
+{
+  "component": "GraphApp",
+  "title": "graph",
+  "icon": "circle-square",
+  "width": 400,
+  "height": 300,
+  "minWidth": 300,
+  "minHeight": 300
+}
+```
+
+then duplicate /src/components/apps/TodoApp.vue to /src/components/apps/GraphApp.vue
+
+and add the two lines in /src/main.js
+
+```
+import GraphApp from "@/components/apps/GraphApp";
+Vue.component("GraphApp", GraphApp);
+```
